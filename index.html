@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drum Sequencer</title>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b82a950b5f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="title-container">
+        <h1 class="title">Drum Sequencer</h1>
+    </div>
+
+    <div class="sequencer-control">
+        <div class="playback-control control-row">
+            <button class="play"><span class="fas fa-play"></span></button>
+            <button class="stop"><span class="fas fa-stop"></span></button>
+            <button class="reset"><span class="fas fa-redo-alt"></span></button>
+        </div>
+
+        <div class="pattern-control control-row">
+            <button class="pattern pattern-active" value="0">1</button>
+            <button class="pattern" value="1">2</button>
+            <button class="pattern" value="2">3</button>
+            <button class="pattern" value="3">4</button>
+        </div>
+
+        <div class="tempo-control control-row">
+            <button class="tempo-down"><span class="fas fa-caret-down"></span></button>
+            <span class="tempo-label">110</span>
+            <button class="tempo-up"><span class="fas fa-caret-up"></span></button>
+        </div>
+    </div>
+
+    <div class="note-grid">
+        <div id="0">
+            <button class="note" value="0"></button>
+            <button class="note" value="1"></button>
+            <button class="note" value="2"></button>
+            <button class="note endSub" value="3"></button>
+            <button class="note" value="4"></button>
+            <button class="note" value="5"></button>
+            <button class="note" value="6"></button>
+            <button class="note endSub" value="7"></button>
+            <button class="note" value="8"></button>
+            <button class="note" value="9"></button>
+            <button class="note" value="10"></button>
+            <button class="note endSub" value="11"></button>
+            <button class="note" value="12"></button>
+            <button class="note" value="13"></button>
+            <button class="note" value="14"></button>
+            <button class="note endSub" value="15"></button>
+        </div>
+
+        <div id="1">
+            <button class="note" value="0"></button>
+            <button class="note" value="1"></button>
+            <button class="note" value="2"></button>
+            <button class="note endSub" value="3"></button>
+            <button class="note" value="4"></button>
+            <button class="note" value="5"></button>
+            <button class="note" value="6"></button>
+            <button class="note endSub" value="7"></button>
+            <button class="note" value="8"></button>
+            <button class="note" value="9"></button>
+            <button class="note" value="10"></button>
+            <button class="note endSub" value="11"></button>
+            <button class="note" value="12"></button>
+            <button class="note" value="13"></button>
+            <button class="note" value="14"></button>
+            <button class="note endSub" value="15"></button>
+        </div>
+
+        <div id="2">
+            <button class="note" value="0"></button>
+            <button class="note" value="1"></button>
+            <button class="note" value="2"></button>
+            <button class="note endSub" value="3"></button>
+            <button class="note" value="4"></button>
+            <button class="note" value="5"></button>
+            <button class="note" value="6"></button>
+            <button class="note endSub" value="7"></button>
+            <button class="note" value="8"></button>
+            <button class="note" value="9"></button>
+            <button class="note" value="10"></button>
+            <button class="note endSub" value="11"></button>
+            <button class="note" value="12"></button>
+            <button class="note" value="13"></button>
+            <button class="note" value="14"></button>
+            <button class="note endSub" value="15"></button>
+        </div>
+
+        <div id="3">
+            <button class="note" value="0"></button>
+            <button class="note" value="1"></button>
+            <button class="note" value="2"></button>
+            <button class="note endSub" value="3"></button>
+            <button class="note" value="4"></button>
+            <button class="note" value="5"></button>
+            <button class="note" value="6"></button>
+            <button class="note endSub" value="7"></button>
+            <button class="note" value="8"></button>
+            <button class="note" value="9"></button>
+            <button class="note" value="10"></button>
+            <button class="note endSub" value="11"></button>
+            <button class="note" value="12"></button>
+            <button class="note" value="13"></button>
+            <button class="note" value="14"></button>
+            <button class="note endSub" value="15"></button>
+        </div>
+
+        <div id="4">
+            <button class="note" value="0"></button>
+            <button class="note" value="1"></button>
+            <button class="note" value="2"></button>
+            <button class="note endSub" value="3"></button>
+            <button class="note" value="4"></button>
+            <button class="note" value="5"></button>
+            <button class="note" value="6"></button>
+            <button class="note endSub" value="7"></button>
+            <button class="note" value="8"></button>
+            <button class="note" value="9"></button>
+            <button class="note" value="10"></button>
+            <button class="note endSub" value="11"></button>
+            <button class="note" value="12"></button>
+            <button class="note" value="13"></button>
+            <button class="note" value="14"></button>
+            <button class="note endSub" value="15"></button>
+        </div>
+
+        <div id="5">
+            <button class="note" value="0"></button>
+            <button class="note" value="1"></button>
+            <button class="note" value="2"></button>
+            <button class="note endSub" value="3"></button>
+            <button class="note" value="4"></button>
+            <button class="note" value="5"></button>
+            <button class="note" value="6"></button>
+            <button class="note endSub" value="7"></button>
+            <button class="note" value="8"></button>
+            <button class="note" value="9"></button>
+            <button class="note" value="10"></button>
+            <button class="note endSub" value="11"></button>
+            <button class="note" value="12"></button>
+            <button class="note" value="13"></button>
+            <button class="note" value="14"></button>
+            <button class="note endSub" value="15"></button>
+        </div>
+
+        <div id="6">
+            <button class="note" value="0"></button>
+            <button class="note" value="1"></button>
+            <button class="note" value="2"></button>
+            <button class="note endSub" value="3"></button>
+            <button class="note" value="4"></button>
+            <button class="note" value="5"></button>
+            <button class="note" value="6"></button>
+            <button class="note endSub" value="7"></button>
+            <button class="note" value="8"></button>
+            <button class="note" value="9"></button>
+            <button class="note" value="10"></button>
+            <button class="note endSub" value="11"></button>
+            <button class="note" value="12"></button>
+            <button class="note" value="13"></button>
+            <button class="note" value="14"></button>
+            <button class="note endSub" value="15"></button>
+        </div>
+
+        <div id="7">
+            <button class="note" value="0"></button>
+            <button class="note" value="1"></button>
+            <button class="note" value="2"></button>
+            <button class="note endSub" value="3"></button>
+            <button class="note" value="4"></button>
+            <button class="note" value="5"></button>
+            <button class="note" value="6"></button>
+            <button class="note endSub" value="7"></button>
+            <button class="note" value="8"></button>
+            <button class="note" value="9"></button>
+            <button class="note" value="10"></button>
+            <button class="note endSub" value="11"></button>
+            <button class="note" value="12"></button>
+            <button class="note" value="13"></button>
+            <button class="note" value="14"></button>
+            <button class="note endSub" value="15"></button>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy 2020 <a href="https://zachsnoek.github.io/drum-sequencer">Zachary D. Snoek</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/styler.js"></script>
+    <script src="js/sequencer.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

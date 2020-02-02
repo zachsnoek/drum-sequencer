@@ -1,0 +1,109 @@
+/*
+    Element Selectors
+*/
+body {
+    background-color: rgb(29, 29, 29);
+    font-family: 'Space Mono', monospace;
+    text-align: center;
+}
+
+button {
+    font-family: inherit;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+/*
+    Title 
+*/
+.title-container {
+    margin-top: 30px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #94E6FF;
+}
+
+/*
+    Sequencer Controls
+*/
+.sequencer-control {
+    margin: 50px auto;
+}
+
+.sequencer-control button {
+    height: 40px;
+    width: 60px;
+    font-size: 1rem;
+    border-radius: 2px;
+    border-color: rgb(87, 87, 87);
+    background-color: rgb(87, 87, 87);
+    color: #E0F8FF;
+}
+
+/*
+    Playback and Pattern Controls
+*/
+.playback-control, .pattern-control {
+    margin-top: 15px;
+}
+
+button.pattern-active {
+    background-color: #E0F8FF;
+    color: rgb(87, 87, 87);
+}
+
+/*
+    Tempo Control
+*/
+.tempo-control {
+    margin-top: 25px;
+}
+
+.tempo-label {
+    display: inline;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border-color: rgb(87, 87, 87);
+    background-color: rgb(87, 87, 87);
+    color: #E0F8FF;
+}
+
+/*
+    Note Grid and Notes
+*/
+.note-grid {
+    margin: 0 auto;
+}
+
+.note {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 2px;
+    border-radius: 2px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #76B8CC;    
+    background-color: #76B8CC;
+}
+
+.note-active {
+    background-color: #E0F8FF;
+    border-color: #E0F8FF;
+}
+
+/* End of subdivision */
+.endSub {
+    margin-right: 15px;
+}
+
+/*
+    Footer
+*/
+.footer {
+    margin-top: 60px;
+    color: rgba(148, 230, 255, 0.386);
+}
