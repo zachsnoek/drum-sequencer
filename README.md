@@ -10,7 +10,7 @@ The sequencer is highly flexible and allows for customization of
 * Number of measures
 * Number of beats in a measure (subdivision)
 
-Try the live demo [here](zachsnoek.github.io/drum-sequencer).
+Try the live demo [here](https://zachsnoek.github.io/drum-sequencer/).
 
 ## Future Improvements
 * Beat highlighting for each subdivision
