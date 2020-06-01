@@ -38,7 +38,7 @@ class Sequencer {
      * patterns specified by the numPatterns property.
      */
     initializePatterns() {
-        for (var i = 0; i < this.numPatterns; i++) {
+        for (let i = 0; i < this.numPatterns; i++) {
             this.patterns[i] = this.initializePattern();
         }
     }
@@ -48,9 +48,9 @@ class Sequencer {
      * specified by the numSamples property.
      */
     initializePattern() {
-        var pattern = [];
+        let pattern = [];
 
-        for (var i = 0; i < this.numSamples; i++) {
+        for (let i = 0; i < this.numSamples; i++) {
             pattern[i] = this.initializeGrid();
         }
 
@@ -62,9 +62,9 @@ class Sequencer {
      * by the numBeats property.
      */
     initializeGrid() {
-        var grid = [];
+        let grid = [];
 
-        for (var i = 0; i < this.numBeats; i++) {
+        for (let i = 0; i < this.numBeats; i++) {
             grid[i] = 0;
         }
 
@@ -76,7 +76,7 @@ class Sequencer {
      * /samples.
      */
     initializeSamples() {
-        for (var i = 0; i < this.numSamples; i++) {
+        for (let i = 0; i < this.numSamples; i++) {
             this.samples[i] = new Audio(this.sampleDir + "/" + String(i) + this.sampleExt);
         }
     }
@@ -116,8 +116,8 @@ class Sequencer {
      * @param {*} note The .note that was pressed.
      */
     toggleNote(note) {
-        var sample = Number($(note).parent().attr("id"));       // The sample that was triggered
-        var beat = Number($(note).val());                       // The beat of the sample that was triggered
+        const sample = Number($(note).parent().attr("id"));     // The sample that was triggered
+        const beat = Number($(note).val());                     // The beat of the sample that was triggered
 
         this.patterns[this.pattern][sample][beat] = !this.patterns[this.pattern][sample][beat];     // Trigger beat in its sample grid
         this.styler.toggleNote(note);                         // Change the note's color
@@ -130,7 +130,7 @@ class Sequencer {
      * @param {*} pattern The .pattern that was pressed.
      */
     togglePattern(pattern) {
-        var patternNumber = Number($(pattern).val());
+        const patternNumber = Number($(pattern).val());
         this.styler.togglePattern(pattern);
         this.styler.toggleNoteGrid(this.patterns[patternNumber]);
         this.pattern = patternNumber;
@@ -140,7 +140,7 @@ class Sequencer {
      * Plays the samples that are toggled at the current beat.
      */
     play() {
-        for (var sample = 0; sample < this.numSamples; sample++) {
+        for (let sample = 0; sample < this.numSamples; sample++) {
             if (this.patterns[this.pattern][sample][this.beat]) {
                 this.samples[sample].play();
                 this.samples[sample].currentTime = 0;
