@@ -33,18 +33,18 @@ class Styler {
         // add the class to notes in the new pattern
 
         // Get all of the sample rows in the note-grid
-        var sampleRows  = $("." + this.noteGrid).children();
+        const sampleRows  = $("." + this.noteGrid).children();
 
-        for (var i = 0; i < sampleRows.length; i++) {
+        for (let i = 0; i < sampleRows.length; i++) {
             // Get all of the notes in the sample row
-            var notes = $(sampleRows[i]).children();
+            const notes = $(sampleRows[i]).children();
 
             // For each of the notes in the sample row, remove the 
             // note-active class unless the beat is toggled in the 
             // new pattern
-            for (var j = 0; j < notes.length; j++) {
-                var newBeat = newPattern[i][j];     // Get the beat in the pattern that corresponds with the note
-                var button = $(notes[j]);
+            for (let j = 0; j < notes.length; j++) {
+                const newBeat = newPattern[i][j];   // Get the beat in the pattern that corresponds with the note
+                let button = $(notes[j]);
 
                 if ((button).hasClass(this.noteActive) && !newBeat) {
                     button.removeClass(this.noteActive);
@@ -62,10 +62,10 @@ class Styler {
     togglePattern(pattern) {
         // Assign the pattern-active class to the button that was pressed
         // and remove it from the button that previously had the class
-        var patternButtons = $("." + this.patternControl).children();
+        const patternButtons = $("." + this.patternControl).children();
 
-        for (var i = 0; i < patternButtons.length; i++) {
-            var button = $(patternButtons[i]);
+        for (let i = 0; i < patternButtons.length; i++) {
+            let button = $(patternButtons[i]);
 
             if (button.hasClass(this.patternActive)) {
                 button.removeClass(this.patternActive);
@@ -89,8 +89,8 @@ class Styler {
      */
     reset() {
         // Reset all of the notes
-        var notes = $("." + this.note);
-        for (var i = 0; i < notes.length; i++) {
+        const notes = $("." + this.note);
+        for (let i = 0; i < notes.length; i++) {
             if ($(notes[i]).hasClass(this.noteActive)) $(notes[i]).removeClass(this.noteActive);
         }
 
